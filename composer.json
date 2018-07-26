@@ -1,0 +1,29 @@
+{
+    "name": "wujunze/dingtalk-exception",
+    "description": "Laravel exception notify through DingTalk",
+    "type": "library",
+    "require": {
+        "wangju/ding-notice": "^1.0"
+    },
+    "license": "Apache2.0",
+    "authors": [
+        {
+            "name": "wujunze",
+            "email": "itwujunze@163.com"
+        }
+    ],
+    "require-dev": {
+        "laravel/framework": "^5.6",
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wujunze\\DingTalkException\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wujunze\\DingTalkException\\Tests\\": "tests/"
+        }
+    }
+}
