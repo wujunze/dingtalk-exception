@@ -23,6 +23,9 @@ publish the config file:
 
 ## Usage
 
+fix file
+ app/Exceptions/Handler.php
+
 ```
 
 use Wujunze\DingTalkException\DingTalkExceptionHelper;
