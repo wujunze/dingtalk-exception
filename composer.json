@@ -5,7 +5,7 @@
     "require": {
         "wangju/ding-notice": "^1.0"
     },
-    "license": "Apache2.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "wujunze",
