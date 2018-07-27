@@ -8,8 +8,10 @@ class DingTalkExceptionHelper
 
     /**
      * @param \Exception $exception
+     *
+     * @param bool $simple
      */
-    public static function notify($exception)
+    public static function notify($exception, bool $simple = false)
     {
         DingTalkJob::dispatch(
             \request()->fullUrl(),
@@ -18,7 +20,8 @@ class DingTalkExceptionHelper
             $exception->getCode(),
             $exception->getFile(),
             $exception->getLine(),
-            $exception->getTraceAsString()
+            $exception->getTraceAsString(),
+            $simple
         );
     }
 

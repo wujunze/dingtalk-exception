@@ -45,6 +45,11 @@ class DingTalkJob implements ShouldQueue
     private $exception;
 
     /**
+     * @var
+     */
+    private $simple;
+
+    /**
      * Create a new job instance.
      *
      * @param $url
@@ -54,16 +59,18 @@ class DingTalkJob implements ShouldQueue
      * @param $file
      * @param $line
      * @param $trace
+     * @param $simple
      */
-    public function __construct($url, $exception, $message, $code, $file, $line, $trace)
+    public function __construct($url, $exception, $message, $code, $file, $line, $trace, $simple = false)
     {
         $this->message = $message;
         $this->code = $code;
         $this->file = $file;
         $this->line = $line;
         $this->url = $url;
-        $this->trace = $trace;
+        $this->trace =  $trace;
         $this->exception = $exception;
+        $this->simple = $simple;
     }
 
     /**
@@ -79,7 +86,7 @@ class DingTalkJob implements ShouldQueue
             'Project Name:' . config('app.name'),
             'Url:' . $this->url,
             'Exception:' . " $this->exception(code:$this->code): $this->message at $this->file:$this->line",
-            'Exception Trace:' . $this->trace,
+            $this->simple ? '' : 'Exception Trace:' . $this->trace,
         ];
 
         try {
