@@ -46,3 +46,26 @@ class Handler extends ExceptionHandler
 
 
 ![file](https://lccdn.phphub.org/uploads/images/201807/26/4269/jOE1tqAqEn.png?imageView2/2/w/1240/h/0)
+
+
+## Config 
+
+simple type 
+
+```
+
+use Wujunze\DingTalkException\DingTalkExceptionHelper;
+
+class Handler extends ExceptionHandler
+{
+  // ...
+  
+    public function report(Exception $exception)
+    {
+        DingTalkExceptionHelper::notify($exception, true);
+        parent::report($exception);
+    }
+
+}
+
+```
