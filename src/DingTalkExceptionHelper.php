@@ -13,8 +13,8 @@ class DingTalkExceptionHelper
      */
     public static function notify($exception, bool $simple = false)
     {
-        DingTalkJob::dispatch(
-            \request()->fullUrl(),
+        dispatch(new DingTalkJob(
+            app('request')->fullUrl(),
             get_class($exception),
             $exception->getMessage(),
             $exception->getCode(),
@@ -22,7 +22,7 @@ class DingTalkExceptionHelper
             $exception->getLine(),
             $exception->getTraceAsString(),
             $simple
-        );
+        ));
     }
 
 }
