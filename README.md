@@ -1,5 +1,5 @@
 # dingtalk-exception
-Laravel exception notify through DingTalk
+Laravel/Lumen exception notify through DingTalk
 
 [![Latest Stable Version](https://poser.pugx.org/wujunze/dingtalk-exception/v/stable)](https://packagist.org/packages/wujunze/dingtalk-exception) [![Total Downloads](https://poser.pugx.org/wujunze/dingtalk-exception/downloads)](https://packagist.org/packages/wujunze/dingtalk-exception) [![License](https://poser.pugx.org/wujunze/dingtalk-exception/license)](https://packagist.org/packages/wujunze/dingtalk-exception)
 
@@ -15,7 +15,7 @@ Laravel exception notify through DingTalk
 
 Add the service provider to the `providers` array in `config/app.php`:
 
-`DingNotice\DingNoticeServiceProvider"::class,`
+`DingNotice\DingNoticeServiceProvider::class,`
 
 publish the config file:
 
