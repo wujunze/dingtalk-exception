@@ -45,7 +45,7 @@ class Handler extends ExceptionHandler
 ```
 
 
-![file](https://lccdn.phphub.org/uploads/images/201807/26/4269/jOE1tqAqEn.png?imageView2/2/w/1240/h/0)
+![file](https://wujunze.com/blog-images/r/p/001/laravel-dingtalk.png)
 
 
 ## Config 
