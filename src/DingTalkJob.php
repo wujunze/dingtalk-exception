@@ -90,7 +90,7 @@ class DingTalkJob implements ShouldQueue
         try {
             ding()->text(implode(PHP_EOL, $message));
         } catch (\Exception $exception) {
-            logger($exception->getMessage());
+            app('log')->error($exception->getMessage());
         }
     }
 }
